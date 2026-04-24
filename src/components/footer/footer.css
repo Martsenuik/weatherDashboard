@@ -1,0 +1,52 @@
+.footer{
+    background-color: rgba(255, 179, 108, 1);
+        display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 140px;
+            padding: 50px;
+}
+
+.footer-logo{}
+
+.footer-box-address{}
+
+.footer-title-address{
+        font-family: Montserrat Alternates;
+            font-size: 16px;
+            padding-bottom: 10px;
+}
+
+.footer-text-address{
+    font-size: 12px;
+}
+
+.footer-box-contacts{
+
+}
+
+.footer-title-contacts{
+    font-family: Montserrat Alternates;
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+.footer-boxIcon-contacts{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-text-contacts {}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+
+.hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/backgroundHero.png);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+}
+
+.hero-title{
+    color: white;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 40px;
+
+}
+
+.hero-text-wrapper{
+
+    display: flex;
+    margin: 95px;
+    align-items: center;
+}
+
+.hero-leftText{
+    color: white;
+    font-size: 24px;
+}
+
+.hero-line{
+    width: 3px;
+    height: 144px;
+    background-color: white;
+    border: 3px;
+    margin: 35px;
+}
+
+.hero-rightText{
+        color: white;
+            font-size: 24px;
+}
+
+.hero-input-wrapper{
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-input{
+    width: 625px;
+    height: 42px;
+    background-color: rgba(217, 217, 217, 1);
+    padding-left: 35px;
+    border-radius: 10px 0  0 10px;
+    border: none;
+}
+
+.hero-search-btn{
+    background-color: rgba(255, 179, 108, 1);
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding: 9px;
+    border-left: 2px solid black;
+
+}
+
+.hero-search-img{}
+
+
+
+

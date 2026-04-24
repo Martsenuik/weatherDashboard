@@ -9,7 +9,7 @@ export const Header = () => {
     <section className="header">
       <img className="logo-svg" src={logo} alt="logo" />
 
-      <nav className="navigation">
+      <nav className="header-navigation">
         <ul className="nav-list">
           {NavListData.map(({ id, text, link }) => {
             return (
