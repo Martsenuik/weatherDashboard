@@ -1,12 +1,13 @@
 import "../weatherForecast/shortForecast.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import refresh from "../../images/svg/refresh.svg";
 import heart from "../../images/svg/heart.svg";
 import SvgDelete from "../../images/svg/SvgDelete.svg";
 import { cityCordinates } from "./cityCordinates";
 
-export const ShortForecast = () => {
+export const ShortForecast = ({ searchValue }) => {
   const [weatherData, setWeatherData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       const results = await Promise.all(
@@ -28,9 +29,18 @@ export const ShortForecast = () => {
   if (!weatherData.length) {
     return <div>Завантаження...</div>;
   }
+
+  const handleDelete = (id) => {
+    setWeatherData((prevState) => prevState.filter((card) => card.id !== id));
+  };
+
+  const filteredData = weatherData.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+
   return (
     <section className="shortForecast">
-      {weatherData.map((item, index) => (
+      {filteredData.map((item, index) => (
         <div className="shortForecast-card" key={index}>
           <div className="shortForecast-box-country">
             <p className="shortForecast-textCity">{item.name}</p>
@@ -76,10 +86,19 @@ export const ShortForecast = () => {
           <p className="shortForecast-temp">{Math.round(item.main.temp)}°C</p>
 
           <div className="shortForecast-lower-panel">
-            <img className="shortForecast-refresh" src={refresh} alt="" />
-            <img className="shortForecast-heart" src={heart} alt="" />
+            <img
+              className="shortForecast-refresh"
+              src={refresh}
+              alt="refresh"
+            />
+            <img className="shortForecast-heart" src={heart} alt="heart" />
             <button className="shortForecast-btn-seeMore">See more</button>
-            <img className="shortForecast-delete" src={SvgDelete} alt="" />
+            <img
+              className="shortForecast-delete"
+              onClick={() => handleDelete(item.id)}
+              src={SvgDelete}
+              alt="SvgDelete"
+            />
           </div>
         </div>
       ))}

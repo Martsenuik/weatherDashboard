@@ -1,7 +1,8 @@
 import "./hero.css";
 import search from "../../images/svg/search.svg";
+import { useState, useContext } from "react";
 
-export const Hero = () => {
+export const Hero = ({ searchValue, setSearchValue }) => {
   return (
     <section className="hero">
       <h1 className="hero-title">Weather dashboard</h1>
@@ -20,6 +21,8 @@ export const Hero = () => {
           className="hero-input"
           type="text"
           placeholder="Search location..."
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
         />
         <button className="hero-search-btn">
           <img className="hero-search-img" src={search} alt="search" />
