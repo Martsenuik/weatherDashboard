@@ -4,9 +4,12 @@ import refresh from "../../images/svg/refresh.svg";
 import heart from "../../images/svg/heart.svg";
 import SvgDelete from "../../images/svg/SvgDelete.svg";
 import { cityCordinates } from "./cityCordinates";
+import { WeatherDetails } from "./seeMore/WeatherDetails/WeatherDetails";
 
 export const ShortForecast = ({ searchValue }) => {
   const [weatherData, setWeatherData] = useState([]);
+  const [weatherDetailsOpen, setWeatherDetailsOpen] = useState(false);
+  const [selectedWeather, setSelectedWeather] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -92,7 +95,15 @@ export const ShortForecast = ({ searchValue }) => {
               alt="refresh"
             />
             <img className="shortForecast-heart" src={heart} alt="heart" />
-            <button className="shortForecast-btn-seeMore">See more</button>
+            <button
+              className="shortForecast-btn-seeMore"
+              onClick={() => {
+                setWeatherDetailsOpen(true);
+                setSelectedWeather(item);
+              }}
+            >
+              See more
+            </button>
             <img
               className="shortForecast-delete"
               onClick={() => handleDelete(item.id)}
@@ -102,6 +113,7 @@ export const ShortForecast = ({ searchValue }) => {
           </div>
         </div>
       ))}
+      {weatherDetailsOpen && <WeatherDetails weatherData={selectedWeather} />}
     </section>
   );
 };
