@@ -1,8 +1,14 @@
+import thermometer from "../../../../images/svg/thermometer.svg";
+import speedometer from "../../../../images/svg/speedometer.svg";
+import wind from "../../../../images/svg/wind.svg";
+import eye from "../../../../images/svg/eye.svg";
+import cloud from "../../../../images/svg/cloud.svg";
+
 export const getDataWeatherDetails = (weatherData) => [
   {
     type: "Feels like",
     name: weatherData.main.feels_like,
-    img: weatherData.weather[0].icon,
+    img: thermometer,
   },
   {
     minTemp: "Min ℃",
@@ -12,22 +18,22 @@ export const getDataWeatherDetails = (weatherData) => [
   },
   {
     type: "Humidity",
-    name: weatherData.main.humidity,
-    img: weatherData.weather[0].icon,
+    name: `${weatherData.main.humidity} %`,
+    img: cloud,
   },
   {
     type: "Pressure",
-    name: weatherData.main.pressure,
-    img: weatherData.weather[0].icon,
+    name: `${weatherData.main.pressure} Pa`,
+    img: speedometer,
   },
   {
     type: "Wind speed",
-    name: weatherData.wind.speed,
-    img: weatherData.weather[0].icon,
+    name: `${weatherData.wind.speed} m/s`,
+    img: wind,
   },
   {
     type: "Visibility",
     name: weatherData.visibility,
-    img: weatherData.weather[0].icon,
+    img: eye,
   },
 ];
