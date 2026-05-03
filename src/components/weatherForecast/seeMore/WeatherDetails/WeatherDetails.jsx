@@ -6,9 +6,9 @@ export const WeatherDetails = ({ weatherData }) => {
   return (
     <section className="weatherDetails">
       <ul className="weatherDetails-list">
-        {data.map(({ type, name, img }) => {
+        {data.map(({ type, name, img, index }) => {
           return (
-            <li className="weatherDetails-item" key={name}>
+            <li className="weatherDetails-item" key={index}>
               <p className="weatherDetails-type-text">{type}</p>
               <p className="weatherDetails-name-text">{name}</p>
               <img

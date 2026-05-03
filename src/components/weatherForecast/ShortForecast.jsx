@@ -5,11 +5,13 @@ import heart from "../../images/svg/heart.svg";
 import SvgDelete from "../../images/svg/SvgDelete.svg";
 import { cityCordinates } from "./cityCordinates";
 import { WeatherDetails } from "./seeMore/WeatherDetails/WeatherDetails";
+import { HourlyForecast } from "./seeMore/HourlyForecast/HourlyForecast";
 
 export const ShortForecast = ({ searchValue }) => {
   const [weatherData, setWeatherData] = useState([]);
-  const [weatherDetailsOpen, setWeatherDetailsOpen] = useState(false);
+  const [btnSeeMoreOpen, setBtnSeeMoreOpen] = useState(false);
   const [selectedWeather, setSelectedWeather] = useState(null);
+  const [hourlyData, setHourlyData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -99,7 +101,7 @@ export const ShortForecast = ({ searchValue }) => {
               <button
                 className="shortForecast-btn-seeMore"
                 onClick={() => {
-                  setWeatherDetailsOpen(true);
+                  setBtnSeeMoreOpen(true);
                   setSelectedWeather(item);
                 }}
               >
@@ -115,7 +117,8 @@ export const ShortForecast = ({ searchValue }) => {
           </div>
         ))}
       </section>
-      {weatherDetailsOpen && <WeatherDetails weatherData={selectedWeather} />}
+      {btnSeeMoreOpen && <WeatherDetails weatherData={selectedWeather} />}
+      {btnSeeMoreOpen && <HourlyForecast hourly={hourlyData} />}
     </>
   );
 };
