@@ -1,0 +1,89 @@
+.petsHighlights{
+
+}
+
+.petsHighlights-wrraper{
+display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.petsHighlights-title{
+    font-family: Montserrat;
+        font-weight: 500;
+        font-size: 20px;
+        padding-bottom: 50px;
+}
+
+.petsHighlights-box{
+width: 270px;
+
+}
+
+
+.petsHighlights-img{
+
+    border-radius: 10px;
+
+}
+
+.petsHighlights-text{
+        font-family: Montserrat;
+            font-weight: 500;
+            font-size: 16px;
+}
+
+
+.petsHighlights-btn{
+    background-color: rgba(255, 179, 108, 1);
+    border-radius: 10px;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

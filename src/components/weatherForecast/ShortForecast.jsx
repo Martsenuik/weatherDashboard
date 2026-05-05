@@ -118,7 +118,7 @@ export const ShortForecast = ({ searchValue }) => {
         ))}
       </section>
       {btnSeeMoreOpen && <WeatherDetails weatherData={selectedWeather} />}
-      {btnSeeMoreOpen && <HourlyForecast hourly={hourlyData} />}
+      {/* {btnSeeMoreOpen && <HourlyForecast hourly={hourlyData} />} */}
     </>
   );
 };

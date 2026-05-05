@@ -6,14 +6,24 @@ export const WeatherDetails = ({ weatherData }) => {
   return (
     <section className="weatherDetails">
       <ul className="weatherDetails-list">
-        {data.map(({ type, name, img, index }) => {
+        {data.map((item, index) => {
+          if (item.minTemp) {
+            return (
+              <li className="weatherDetails-item" key={index}>
+                <p className="weatherDetails-type-text">{item.minTemp}</p>
+                <p className="weatherDetails-name-text">{item.minTempValue}</p>
+                <p className="weatherDetails-type-text">{item.maxTemp}</p>
+                <p className="weatherDetails-name-text">{item.maxTempValue}</p>
+              </li>
+            );
+          }
           return (
             <li className="weatherDetails-item" key={index}>
-              <p className="weatherDetails-type-text">{type}</p>
-              <p className="weatherDetails-name-text">{name}</p>
+              <p className="weatherDetails-type-text">{item.type}</p>
+              <p className="weatherDetails-name-text">{item.name}</p>
               <img
                 className="weatherDetails-img"
-                src={img}
+                src={item.img}
                 alt="weather icon"
               />
             </li>
