@@ -11,7 +11,6 @@ export const ShortForecast = ({ searchValue }) => {
   const [weatherData, setWeatherData] = useState([]);
   const [btnSeeMoreOpen, setBtnSeeMoreOpen] = useState(false);
   const [selectedWeather, setSelectedWeather] = useState(null);
-  const [hourlyData, setHourlyData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,9 +30,9 @@ export const ShortForecast = ({ searchValue }) => {
     fetchData();
   }, []);
 
-  if (!weatherData.length) {
-    return <div>Завантаження...</div>;
-  }
+  // if (!weatherData.length) {
+  //   return <div>Завантаження...</div>;
+  // }
 
   const handleDelete = (id) => {
     setWeatherData((prevState) => prevState.filter((card) => card.id !== id));
@@ -118,7 +117,9 @@ export const ShortForecast = ({ searchValue }) => {
         ))}
       </section>
       {btnSeeMoreOpen && <WeatherDetails weatherData={selectedWeather} />}
-      {/* {btnSeeMoreOpen && <HourlyForecast hourly={hourlyData} />} */}
+      {/* {btnSeeMoreOpen && (
+        <HourlyForecast selectedWeatherData={selectedWeather} />
+      )} */}
     </>
   );
 };

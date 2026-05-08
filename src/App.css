@@ -4,3 +4,9 @@ body{
 section{
     padding: 0 130px;
 }
+
+@media screen and (max-width: 480px) {
+    section {
+            padding: 0 120px;
+        }
+}

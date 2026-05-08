@@ -35,7 +35,44 @@
     gap: 30px;
     
 }
+.header-mobile-menu{
+    display: none;
+}
 
+/* ////////////////// mobile ////////////////// */
 
+@media screen and (max-width: 480px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo-svg {
+        width: 34px;
+        height: 22px;
+    }
 
+    .header-navigation {
+              display: none;
+    }
+    
+    .header-navigation.open {
+              display: block;
+    }
 
+    .header-right-box{
+             display: none;
+    } 
+          
+
+    .header-mobile-menu{
+        display: flex;
+        gap: 5px;
+        font-size: 10px;
+    }
+
+    .header-arrow{
+        width: 6px;
+
+    }
+
+}
