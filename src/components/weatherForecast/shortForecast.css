@@ -132,7 +132,95 @@ height: 25px;
 }
 
 
+/* ////////////////// mobile ////////////////// */
 
+@media screen and (max-width: 480px) {
+    .shortForecast {
+            display: flex;
+            flex-direction: column;
+    
+        }
+    
+        .shortForecast-card {
+            
+    
+        }
+    
+        .shortForecast-box-country {
+            
+    
+        }
+    
+        .shortForecast-textCity {
+            
+        }
+    
+        .shortForecast-textCountry {
+            
+        }
+    
+        .shortForecast-time {
+            
+        }
+    
+        .shortForecast-box-btn {
+            
+        }
+    
+        .shortForecast-btn-hourly {
+            
+        }
+    
+        .shortForecast-btn-weekly {
+            
+        }
+    
+        .shortForecast-box-date {
+            
+        }
+    
+        .shortForecast-date {
+            
+    
+        }
+    
+        .shortForecast-line {
+            
+        }
+    
+        .shortForecast-day {
+            
+        }
+    
+        .shortForecast-temp-img {
+            
+        }
+    
+        .shortForecast-temp {
+            
+        }
+    
+        .shortForecast-lower-panel {
+            
+        }
+    
+        .shortForecast-refresh {
+            
+    
+        }
+    
+        .shortForecast-heart {
+            
+        }
+    
+        .shortForecast-btn-seeMore {
+            
+        }
+    
+        .shortForecast-delete {
+            
+        }
+}
 
 
 

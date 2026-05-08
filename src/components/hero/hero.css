@@ -26,13 +26,14 @@
 }
 
 .hero-leftText{
+    width: 345px;
     color: white;
     font-size: 24px;
 }
 
 .hero-line-desktop{
     width: 3px;
-    height: 144px;
+    height: 110px;
     background-color: white;
     border: 3px;
     margin: 35px;
@@ -52,8 +53,8 @@
 }
 
 .hero-input{
-    width: 625px;
-    height: 42px;
+    width: 402px;
+    height: 27px;
     background-color: rgba(217, 217, 217, 1);
     padding-left: 35px;
     border-radius: 10px 0  0 10px;
@@ -67,6 +68,60 @@
     padding: 9px;
     border-left: 2px solid black;
 
+}
+
+/* ////////////////// tablet ////////////////// */
+
+@media screen and (max-width: 768px) {
+    .hero {
+            
+        }
+    
+        .hero-title {
+            font-size: 20px;
+    
+        }
+    
+        .hero-text-wrapper {
+    align-items: flex-start;
+    gap: 40px;
+            
+        }
+    
+        .hero-leftText {
+            width: 172px;
+            font-size: 14px;
+            text-align: right;
+        }
+    
+        .hero-line-desktop {
+            margin: 0;
+        }
+    
+        .hero-line-mobile {
+            display: none;
+        }
+    
+        .hero-rightText {
+            font-size: 14px;
+        }
+    
+        .hero-input-wrapper {
+            
+        }
+    
+        .hero-input {
+            
+        }
+    
+        .hero-search-btn {
+            padding: 6px;
+            
+        }
+        .hero-search-img{
+            width: 16px;
+            
+        }
 }
 
 

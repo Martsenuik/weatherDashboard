@@ -27,20 +27,18 @@ export const PetsHighlights = () => {
     <section className="petsHighlights">
       <p className="petsHighlights-title">Interacting with our pets</p>
       <div className="petsHighlights-wrraper">
-        {news
-          .slice(0, visibleCount)
-          .map(({ description, urlToImage }, index) => {
-            return (
-              <div key={index} className="petsHighlights-box">
-                <img
-                  className="petsHighlights-img"
-                  src={urlToImage}
-                  alt="image"
-                />
-                <p className="petsHighlights-text">{description}</p>
-              </div>
-            );
-          })}
+        {news.slice(0, visibleCount).map(({ title, urlToImage }, index) => {
+          return (
+            <div key={index} className="petsHighlights-box">
+              <img
+                className="petsHighlights-img"
+                src={urlToImage}
+                alt="image"
+              />
+              <p className="petsHighlights-text">{title}</p>
+            </div>
+          );
+        })}
       </div>
       <button className="petsHighlights-btn" onClick={clickBtnLoadMore}>
         See more

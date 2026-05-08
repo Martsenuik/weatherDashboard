@@ -38,8 +38,108 @@
 
 .footer-text-contacts {}
 
+/* ////////////////// tablet ////////////////// */
+
+@media screen and (max-width: 768px) {
+    .footer {
+            
+        }
+    
+        .footer-logo {
+            width: 58px;
+        }
+    
+        .footer-box-address {}
+    
+        .footer-title-address {
+            font-family: Montserrat Alternates;
+            font-weight: 500;
+            font-size: 14px;
+        }
+    
+        .footer-text-address {
+            font-size: 10px;
+        }
+    
+        .footer-box-contacts {}
+    
+        .footer-title-contacts {
+            font-family: Montserrat Alternates;
+                font-weight: 500;
+                font-size: 14px;
+        }
+    
+        .footer-boxIcon-contacts {
+            width: 35px;
+        }
+    
+        .footer-text-contacts {}
+}
 
 
+/* ////////////////// mobile ////////////////// */
+
+@media screen and (max-width: 480px) {
+
+            .footer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 40px 20px;
+                gap: 40px 0;
+            }
+    
+            .footer-logo {
+                width: 60px;
+                flex: 0 1 auto;
+            }
+    
+            .footer-box-address {
+                flex: 0 1 auto;
+                text-align: left;
+            }
+    
+            .footer-title-address {
+                font-family: 'Montserrat Alternates', sans-serif;
+                font-weight: 500;
+                font-size: 14px;
+                padding-bottom: 8px;
+            }
+    
+            .footer-text-address {
+                font-size: 10px;
+                line-height: 1.4;
+            }
+    
+
+            .footer-box-contacts {
+                flex: 0 0 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+    
+            .footer-title-contacts {
+                font-family: 'Montserrat Alternates', sans-serif;
+                font-weight: 500;
+                font-size: 14px;
+                padding-bottom: 15px;
+            }
+    
+            .footer-boxIcon-contacts {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+    
+            .footer-boxIcon-contacts img {
+                width: 40px;
+                height: 40px;
+            }
+        
+}
 
 
 

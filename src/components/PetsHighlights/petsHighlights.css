@@ -1,5 +1,5 @@
 .petsHighlights{
-
+display: block;
 }
 
 .petsHighlights-wrraper{
@@ -15,16 +15,19 @@ display: flex;
         padding-bottom: 50px;
 }
 
-.petsHighlights-box{
-width: 270px;
-
+.petsHighlights-box {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
 }
 
 
-.petsHighlights-img{
-
+.petsHighlights-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
     border-radius: 10px;
-
 }
 
 .petsHighlights-text{
@@ -39,12 +42,25 @@ width: 270px;
     border-radius: 10px;
     border: none;
     padding: 10px 30px;
-    margin-top: 40px;
     margin-bottom: 70px;
 }
 
+/* ////////////////// tablet ////////////////// */
+
+@media screen and (max-width: 768px) {
+    .petsHighlights {
+        display: none;
+    }
+}
 
 
+/* ////////////////// mobile ////////////////// */
+
+@media screen and (max-width: 480px) {
+    .petsHighlights {
+        display: none;
+    }
+}
 
 
 

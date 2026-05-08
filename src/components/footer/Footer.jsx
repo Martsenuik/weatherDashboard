@@ -15,6 +15,7 @@ export const Footer = () => {
           Svobody str. 35 <br /> Kyiv <br /> Ukraine
         </p>
       </div>
+
       <div className="footer-box-contacts">
         <h3 className="footer-title-contacts">Contact us</h3>
         <div className="footer-boxIcon-contacts">

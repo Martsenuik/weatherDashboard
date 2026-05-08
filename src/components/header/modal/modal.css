@@ -95,6 +95,46 @@
 
 }
 
+/* ////////////////// tablet ////////////////// */
+
+@media screen and (max-width: 768px) {
+    .modal {
+            
+        }
+    
+        .modal-content {
+            width: auto;
+        }
+
+        .close {
+            
+        }
+    
+    
+        .modal-btn {
+            font-size: 12px;
+    
+        }
+    
+        .modal-title {
+            font-size: 20px;
+        }
+    
+        .modal-input-wrapper {
+            font-size: 12px;
+        }
+    
+        .modal-input {
+            width: 310px;
+            height: 40px;
+        }
+    
+        .modal-bottom-text {
+            font-size: 8px;
+        }
+    
+}
+
 /* ////////////////// mobile ////////////////// */
 
 @media screen and (max-width: 480px) {
