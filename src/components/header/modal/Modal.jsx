@@ -1,8 +1,13 @@
 import { useState } from "react";
 import "../modal/modal.css";
 
-export const Modal = () => {
+export const Modal = ({ mobileModalSignOpen, closeAllModals }) => {
   const [modalOpen, setModalOpen] = useState(false);
+
+  const closeModal = () => {
+    setModalOpen(false);
+    closeAllModals();
+  };
 
   return (
     <>
@@ -14,7 +19,7 @@ export const Modal = () => {
       >
         Sign Up
       </button>
-      {modalOpen && (
+      {(modalOpen || mobileModalSignOpen) && (
         <div id="myModal" className="modal">
           <div className="modal-content">
             <p className="modal-title">Sign up</p>
@@ -39,12 +44,7 @@ export const Modal = () => {
               />
             </label>
 
-            <button
-              className=" modal-btn"
-              onClick={() => {
-                setModalOpen(false);
-              }}
-            >
+            <button className="modal-btn" onClick={closeModal}>
               Sign Up
             </button>
             <p className="modal-bottom-text">

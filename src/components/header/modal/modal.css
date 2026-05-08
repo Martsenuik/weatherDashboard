@@ -67,6 +67,8 @@
 }
 
 .modal-input-wrapper{
+    display: flex;
+    flex-direction: column;
     font-size: 14px;
     padding: 20px;
 }
@@ -91,4 +93,49 @@
 .modal-link-in-text{
     text-decoration: underline;
 
+}
+
+/* ////////////////// mobile ////////////////// */
+
+@media screen and (max-width: 480px) {
+    .modal {
+    display: block;
+    }
+        .modal-content {
+width: 100%;
+        }
+    
+
+        .close {
+
+        }
+    
+    
+        .modal-btn {
+
+    
+        }
+    
+        .modal-title {
+            font-size: 20px;
+        }
+    
+        .modal-input-wrapper {
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+
+        }
+    
+        .modal-input {
+
+
+        }
+    
+        .modal-bottom-text {
+            font-size: 8px;
+        }
+    
+        .modal-link-in-text {
+        }
 }

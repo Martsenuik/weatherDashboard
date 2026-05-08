@@ -9,8 +9,14 @@ import { ModalMobileVersion } from "./modalMobileVersion/ModalMobileVersion";
 
 export const Header = () => {
   const [mobileModalOpen, setMobileModalOpen] = useState(false);
+  const [mobileModalSignOpen, setMobileModalSignOpen] = useState(false);
   const onClickModal = () => {
     setMobileModalOpen((prev) => !prev);
+  };
+
+  const closeAllModals = () => {
+    setMobileModalOpen(false);
+    setMobileModalSignOpen(false);
   };
   return (
     <>
@@ -33,14 +39,19 @@ export const Header = () => {
         </p>
 
         <div className="header-right-box">
-          <Modal />
-
           <img className="user-svg" src={user} alt="user" />
         </div>
+
+        <Modal
+          mobileModalSignOpen={mobileModalSignOpen}
+          closeAllModals={closeAllModals}
+        />
       </section>
       <ModalMobileVersion
         mobileModalOpen={mobileModalOpen}
         setMobileModalOpen={setMobileModalOpen}
+        setMobileModalSignOpen={setMobileModalSignOpen}
+        closeAllModals={closeAllModals}
       />
     </>
   );

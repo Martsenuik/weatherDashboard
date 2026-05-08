@@ -3,7 +3,11 @@ import user from "../../../images/svg/user.svg";
 import { useState } from "react";
 import { NavListData } from "../navListData";
 
-export const ModalMobileVersion = ({ mobileModalOpen, setMobileModalOpen }) => {
+export const ModalMobileVersion = ({
+  mobileModalOpen,
+  setMobileModalOpen,
+  setMobileModalSignOpen,
+}) => {
   if (!mobileModalOpen) return null;
   return (
     <>
@@ -22,7 +26,14 @@ export const ModalMobileVersion = ({ mobileModalOpen, setMobileModalOpen }) => {
           </nav>
 
           <div className="header-mobile-right-box">
-            <button className="mobile-modal-btn">Sign Up</button>
+            <button
+              className="mobile-modal-btn"
+              onClick={() => {
+                setMobileModalSignOpen(true);
+              }}
+            >
+              Sign Up
+            </button>
             <img className="mobile-modal-user-svg" src={user} alt="user" />
           </div>
         </div>
