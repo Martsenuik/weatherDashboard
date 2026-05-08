@@ -6,15 +6,18 @@ export const Hero = ({ searchValue, setSearchValue }) => {
   return (
     <section className="hero">
       <h1 className="hero-title">Weather dashboard</h1>
-      <div className="hero-text-wrapper">
-        <p className="hero-leftText">
-          Create your personal list of <br /> favorite cities and always be{" "}
-          <br /> aware of the weather.
-        </p>
-        <div className="hero-line"></div>
-        <p className="hero-rightText">
-          October 2023 <br /> Friday, 13th
-        </p>
+      <div className="hero-box-wrapper">
+        <div className="hero-line-mobile"></div>
+        <div className="hero-text-wrapper">
+          <p className="hero-leftText">
+            Create your personal list of <br /> favorite cities and always be{" "}
+            <br /> aware of the weather.
+          </p>
+          <div className="hero-line-desktop"></div>
+          <p className="hero-rightText">
+            October 2023 <br /> Friday, 13th
+          </p>
+        </div>
       </div>
       <label className="hero-input-wrapper">
         <input

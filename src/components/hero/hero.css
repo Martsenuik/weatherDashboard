@@ -30,12 +30,15 @@
     font-size: 24px;
 }
 
-.hero-line{
+.hero-line-desktop{
     width: 3px;
     height: 144px;
     background-color: white;
     border: 3px;
     margin: 35px;
+}
+.hero-line-mobile{
+    display: none;
 }
 
 .hero-rightText{
@@ -66,8 +69,77 @@
 
 }
 
-.hero-search-img{}
 
 
+/* ////////////////// mobile ////////////////// */
+
+@media screen and (max-width: 480px) {
+    .hero {
+        display: flex;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/backgroundHeroMobile.png);
+        }
+    
+        .hero-title {
+            font-size: 14px;
+            padding-bottom: 50px;
+    
+        }
+        .hero-box-wrapper{
+            display: flex;
+                    align-items: center;
+                    
+        }
+    
+        .hero-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+                align-items: flex-start;
+                margin-left: 30px;
+                gap: 20px;
+        }
+    
+        .hero-leftText {
+            font-size: 10px;
+        }
+
+        .hero-line-desktop{
+            display: none;
+        }
+
+        .hero-line-mobile{
+            display: block;
+                    width: 3px;
+                        height: 80px;
+                        background-color: white;
+                        border: 3px;
+        }
+
+    
+        .hero-rightText {
+            font-size: 10px;
+        }
+    
+        .hero-input-wrapper {
+            padding-top: 50px;
+        }
+    
+        .hero-input {
+            width: 174px;
+            height: 15px;
+            border-radius: 5px 0 0 5px;
+            font-size: 6px;
+            padding-left: 15px;
+        }
+    
+        .hero-search-btn {
+            padding: 3px;
+        }
+
+        .hero-search-img{
+            width: 9px;
+
+                    }
+}
 
 
