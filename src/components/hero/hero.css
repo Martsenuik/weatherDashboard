@@ -53,8 +53,9 @@
 }
 
 .hero-input{
-    width: 402px;
-    height: 27px;
+    width: 625px;
+    height: 42px;
+    
     background-color: rgba(217, 217, 217, 1);
     padding-left: 35px;
     border-radius: 10px 0  0 10px;
@@ -111,7 +112,8 @@
         }
     
         .hero-input {
-            
+            width: 402px;
+                height: 27px;
         }
     
         .hero-search-btn {

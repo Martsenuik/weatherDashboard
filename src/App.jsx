@@ -4,7 +4,7 @@ import { Header } from "./components/header/Header";
 import { Hero } from "./components/hero/Hero";
 import { ShortForecast } from "./components/weatherForecast/ShortForecast";
 import { PetsHighlights } from "./components/PetsHighlights/PetsHighlights";
-//
+import { NatureSlider } from "./components/natureSlider/NatureSlider";
 import { Footer } from "./components/footer/Footer";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Hero searchValue={searchValue} setSearchValue={setSearchValue} />
       <ShortForecast searchValue={searchValue} />
       <PetsHighlights />
-      {/*  */}
+      <NatureSlider />
       <Footer />
     </>
   );
