@@ -1,31 +1,36 @@
-.natureSlider{
-    padding: 40px 0 40px 0;
+.natureSlider {
+    padding: 40px 0;
 }
 
 .swiper {
     overflow: visible !important;
-
 }
 
 .swiper-slide {
-    width: auto;
-    transition: transform 0.3s ease;
-    opacity: 0.5;
-    transform: scale(0.9);
-}
+    width: 166px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.swiper-slide img {
-    width: 100%;
-    border-radius: none;
-    object-fit: cover;
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: 0.3s;
 }
 
 .swiper-slide-active {
     opacity: 1;
     transform: scale(1);
+    z-index: 2;
 }
 
-.natureSlider-title{
+.swiper-img {
+    width: 384px;
+    height: 211px;
+    object-fit: cover;
+    max-width: none;
+}
+
+.natureSlider-title {
     font-family: Montserrat;
     font-weight: 500;
     font-size: 20px;

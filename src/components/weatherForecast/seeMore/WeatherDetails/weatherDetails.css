@@ -39,7 +39,37 @@ height: 220px;
 .weatherDetails-img{}
 
 
+/* ////////////////// tablet ////////////////// */
 
+@media screen and (max-width: 768px) {
+    .weatherDetails {
+
+        }
+    
+        .weatherDetails-list {
+             gap: 20px;
+             padding-left: 5px;
+             padding-right: 5px;
+        }
+    
+        .weatherDetails-item {
+             width: 177px;
+             height: 200px;
+
+        }
+    
+        .weatherDetails-type-text {
+              font-size: 12px;
+        }
+    
+        .weatherDetails-name-text {
+               font-size: 16px;
+        }
+    
+        .weatherDetails-img {
+            width: 60px;
+        }
+}
 
 
 

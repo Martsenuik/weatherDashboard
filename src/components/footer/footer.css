@@ -1,10 +1,13 @@
 .footer{
     background-color: rgba(255, 179, 108, 1);
         display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: flex-start;
             gap: 140px;
             padding: 50px;
+            padding: 0 130px;
+            height: 139px;
+            margin: 0;
 }
 
 .footer-logo{}

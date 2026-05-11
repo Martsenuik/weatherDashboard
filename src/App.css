@@ -2,7 +2,13 @@ body{
     font-family: Montserrat Alternates;
 }
 section{
-    padding: 0 130px;
+    margin: 0 130px;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        margin: 0 80px;
+    }
 }
 
 @media screen and (max-width: 480px) {

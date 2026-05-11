@@ -1,0 +1,115 @@
+.weeklyForecast{
+  background-color: rgba(232, 232, 232, 1);
+  border-radius: 20px;
+  margin-top: 120px;
+}
+
+.weeklyForecast-container{
+    padding: 30px 90px 30px 90px;
+}
+
+.weeklyForecast-title-desktop{
+    display: block;
+font-family: Montserrat;
+font-weight: 600;
+font-size: 16px;
+padding-bottom: 20px;
+}
+
+.weeklyForecast-title-tablet{
+    display: none;
+}
+
+.weeklyForecast-list{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.weeklyForecast-card{
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+background-color: rgba(217, 217, 217, 1);
+border-radius: 10px;
+font-family: Montserrat;
+font-weight: 500;
+font-size: 16px;
+padding: 0 60px  0 60px ;
+}
+
+.weeklyForecast-date{
+
+}
+
+.weeklyForecast-box-middleOfCard{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weeklyForecast-icon{
+width: 45px;
+}
+
+.weeklyForecast-temp{
+
+}
+
+.weeklyForecast-weather-description{
+
+}
+
+
+
+
+
+/* ////////////////// tablet ////////////////// */
+
+@media screen and (max-width: 768px) {
+    .weeklyForecast {
+
+        }
+    
+        .weeklyForecast-container {
+            padding: 20px 40px 20px 40px;
+        }
+    
+        .weeklyForecast-title-desktop {
+            display: none;
+        }
+    
+        .weeklyForecast-title-tablet {
+            display: block;
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 12px;
+            padding-bottom: 15px;
+        }
+    
+        .weeklyForecast-list {
+
+        }
+    
+        .weeklyForecast-card {
+font-size: 14px;
+padding: 0 17px 0 17px;
+        }
+    
+        .weeklyForecast-date {}
+    
+        .weeklyForecast-box-middleOfCard {
+
+        }
+    
+        .weeklyForecast-icon {
+width: 35px;
+        }
+    
+        .weeklyForecast-temp {}
+    
+        .weeklyForecast-weather-description {}
+
+}
+
+

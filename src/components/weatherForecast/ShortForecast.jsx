@@ -6,11 +6,29 @@ import SvgDelete from "../../images/svg/SvgDelete.svg";
 import { cityCordinates } from "./cityCordinates";
 import { WeatherDetails } from "./seeMore/WeatherDetails/WeatherDetails";
 import { HourlyForecast } from "./seeMore/HourlyForecast/HourlyForecast";
+import { WeeklyForecast } from "./seeMore/WeeklyForecast/WeeklyForecast";
 
 export const ShortForecast = ({ searchValue }) => {
   const [weatherData, setWeatherData] = useState([]);
   const [btnSeeMoreOpen, setBtnSeeMoreOpen] = useState(false);
   const [selectedWeather, setSelectedWeather] = useState(null);
+
+  const normalizeWeather = (item) => {
+    return {
+      lat: item.coord?.lat,
+      lon: item.coord?.lon,
+      main: {
+        temp: item.main?.temp,
+        feels_like: item.main?.feels_like ?? item.main?.temp,
+        temp_min: item.main?.temp_min ?? item.main?.temp,
+        temp_max: item.main?.temp_max ?? item.main?.temp,
+        humidity: item.main?.humidity,
+        pressure: item.main?.pressure,
+      },
+      wind: item.wind,
+      visibility: item.visibility,
+    };
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,10 +47,6 @@ export const ShortForecast = ({ searchValue }) => {
 
     fetchData();
   }, []);
-
-  // if (!weatherData.length) {
-  //   return <div>Завантаження...</div>;
-  // }
 
   const handleDelete = (id) => {
     setWeatherData((prevState) => prevState.filter((card) => card.id !== id));
@@ -100,8 +114,8 @@ export const ShortForecast = ({ searchValue }) => {
               <button
                 className="shortForecast-btn-seeMore"
                 onClick={() => {
+                  setSelectedWeather(normalizeWeather(item));
                   setBtnSeeMoreOpen(true);
-                  setSelectedWeather(item);
                 }}
               >
                 See more
@@ -120,6 +134,7 @@ export const ShortForecast = ({ searchValue }) => {
       {/* {btnSeeMoreOpen && (
         <HourlyForecast selectedWeatherData={selectedWeather} />
       )} */}
+      {btnSeeMoreOpen && <WeeklyForecast selectedWeather={selectedWeather} />}
     </>
   );
 };

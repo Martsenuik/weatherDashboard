@@ -2,12 +2,13 @@ import "./weatherDetails.css";
 import { getDataWeatherDetails } from "./DataWeatherDetails";
 
 export const WeatherDetails = ({ weatherData }) => {
+  if (!weatherData?.main) return null;
   const data = getDataWeatherDetails(weatherData);
   return (
     <section className="weatherDetails">
       <ul className="weatherDetails-list">
         {data.map((item, index) => {
-          if (item.minTemp) {
+          if (item.minTemp || item.maxTemp) {
             return (
               <li className="weatherDetails-item" key={index}>
                 <p className="weatherDetails-type-text">{item.minTemp}</p>

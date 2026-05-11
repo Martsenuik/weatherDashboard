@@ -35,10 +35,11 @@ export const NatureSlider = () => {
       <p className="natureSlider-title">Beautiful nature</p>
       <Swiper
         className="swiper"
-        slidesPerView={1.6}
+        slidesPerView={"auto"}
         centeredSlides={true}
-        spaceBetween={20}
-        initialSlide={2}
+        spaceBetween={-10}
+        initialSlide={5}
+        centeredSlidesBounds={true}
         allowTouchMove={false}
         onClick={(swiper, e) => handleClick(swiper, e)}
       >
