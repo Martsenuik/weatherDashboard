@@ -12,6 +12,7 @@ export const ShortForecast = ({ searchValue }) => {
   const [weatherData, setWeatherData] = useState([]);
   const [btnSeeMoreOpen, setBtnSeeMoreOpen] = useState(false);
   const [selectedWeather, setSelectedWeather] = useState(null);
+  const [device, setDevice] = useState("desktop");
 
   const normalizeWeather = (item) => {
     return {
@@ -44,8 +45,15 @@ export const ShortForecast = ({ searchValue }) => {
 
       setWeatherData(results);
     };
-
     fetchData();
+
+    if (window.innerWidth <= 768) {
+      setDevice("mobile");
+    } else if (window.innerWidth <= 1024) {
+      setDevice("tablet");
+    } else {
+      setDevice("desktop");
+    }
   }, []);
 
   const handleDelete = (id) => {
@@ -56,11 +64,21 @@ export const ShortForecast = ({ searchValue }) => {
     item.name.toLowerCase().includes(searchValue.toLowerCase()),
   );
 
+  let indexToSlice;
+
+  if (device === "mobile") {
+    indexToSlice = 1;
+  } else if (device === "tablet") {
+    indexToSlice = 2;
+  } else {
+    indexToSlice = 3;
+  }
+
   return (
     <>
       <section className="shortForecast">
-        {filteredData.map((item, index) => (
-          <div className="shortForecast-card" key={index}>
+        {filteredData.slice(0, indexToSlice).map((item, index) => (
+          <div className="shortForecast-card" key={index.id}>
             <div className="shortForecast-box-country">
               <p className="shortForecast-textCity">{item.name}</p>
               <p className="shortForecast-textCountry">{item.sys.country}</p>

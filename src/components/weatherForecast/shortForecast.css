@@ -1,6 +1,6 @@
 .shortForecast{
     display: flex;
-        justify-content: space-around;
+            justify-content: space-between;
         padding: 40px;
         
 }
@@ -136,31 +136,36 @@ height: 25px;
 
 @media screen and (max-width: 480px) {
     .shortForecast {
-            display: flex;
-            flex-direction: column;
+display: block;
+padding: 0;
+padding: 30px 0 30px 0;
     
         }
     
         .shortForecast-card {
-            
+
     
         }
     
         .shortForecast-box-country {
-            
+
     
         }
     
         .shortForecast-textCity {
-            
+                        font-family: Montserrat;
+                            font-weight: 500;
+                            font-size: 12px;
         }
     
         .shortForecast-textCountry {
-            
+                        font-family: Montserrat;
+                            font-weight: 500;
+                            font-size: 12px;
         }
     
         .shortForecast-time {
-            
+            font-size: 20px;
         }
     
         .shortForecast-box-btn {
@@ -168,15 +173,16 @@ height: 25px;
         }
     
         .shortForecast-btn-hourly {
-            
+            font-size: 9px;
+            padding: 8px 18px;
         }
     
         .shortForecast-btn-weekly {
-            
+            font-size: 9px;
         }
     
         .shortForecast-box-date {
-            
+            font-size: 12px;
         }
     
         .shortForecast-date {
@@ -193,11 +199,12 @@ height: 25px;
         }
     
         .shortForecast-temp-img {
-            
+            width: 83px;
+            height: 83px;
         }
     
         .shortForecast-temp {
-            
+            font-size: 24px;
         }
     
         .shortForecast-lower-panel {
@@ -205,20 +212,21 @@ height: 25px;
         }
     
         .shortForecast-refresh {
-            
+            width: 24px;
     
         }
     
         .shortForecast-heart {
-            
+            width: 24px;
         }
     
         .shortForecast-btn-seeMore {
-            
+            font-size: 9px;
+            padding: 8px 20px;
         }
     
         .shortForecast-delete {
-            
+            width: 24px;
         }
 }
 

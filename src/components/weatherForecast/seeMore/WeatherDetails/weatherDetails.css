@@ -71,6 +71,39 @@ height: 220px;
         }
 }
 
+/* ////////////////// mobile ////////////////// */
+
+@media screen and (max-width: 480px) {
+
+    .weatherDetails {
+        padding: 0;
+    }
+
+            .weatherDetails-list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .weatherDetails-item {
+                width: auto;
+                height: auto;
+                padding: 20px 60px;
+
+            }
+
+            .weatherDetails-type-text {
+                font-size: 10px;
+            }
+
+            .weatherDetails-name-text {
+                font-size: 14px;
+            }
+
+            .weatherDetails-img {
+width: 60px;
+            }
+}
+
 
 
 

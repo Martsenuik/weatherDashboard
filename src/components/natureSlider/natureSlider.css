@@ -1,9 +1,11 @@
 .natureSlider {
     padding: 40px 0;
+    display: block;
 }
 
 .swiper {
     overflow: visible !important;
+
 }
 
 .swiper-slide {
@@ -35,4 +37,21 @@
     font-weight: 500;
     font-size: 20px;
     padding-bottom: 30px;
+}
+
+/* ////////////////// tablet ////////////////// */
+
+@media screen and (max-width: 768px) {
+    .natureSlider {
+            display: none;
+        }
+}
+
+/* ////////////////// mobile ////////////////// */
+
+@media screen and (max-width: 480px) {
+
+    .natureSlider {
+            display: none;
+        }
 }
