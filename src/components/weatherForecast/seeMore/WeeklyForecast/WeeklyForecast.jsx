@@ -9,7 +9,7 @@ export const WeeklyForecast = ({ selectedWeather }) => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
 
         if (!data?.list) return;
 

@@ -50,7 +50,7 @@ export const ShortForecast = ({ searchValue }) => {
 
     if (window.innerWidth < 768) {
       setDevice("mobile");
-    } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+    } else if (window.innerWidth === 768) {
       setDevice("tablet");
     } else {
       setDevice("desktop");
