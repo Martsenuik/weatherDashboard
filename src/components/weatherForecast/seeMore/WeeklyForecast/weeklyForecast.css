@@ -118,8 +118,7 @@ width: 35px;
 @media screen and (max-width: 480px) {
 
     .weeklyForecast {
-        padding: 0;
-        margin-bottom: 30px;
+        margin: 0 50px 30px 50px;
     }
 
     .weeklyForecast-container {
@@ -139,6 +138,7 @@ width: 35px;
                     flex-direction: row;
                     gap: 15px;
                     flex-wrap: wrap;
+                    justify-content: center;
                 }
         
                 .weeklyForecast-card {
