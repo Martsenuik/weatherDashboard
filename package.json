@@ -3,14 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+    "homepage": "https://martsenuik.github.io/weatherDashboard/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+        "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "chart.js": "^4.5.1",
+    "gh-pages": "^6.3.0",
     "newsapi": "^2.4.1",
     "react": "^19.2.5",
     "react-chartjs-2": "^5.3.1",

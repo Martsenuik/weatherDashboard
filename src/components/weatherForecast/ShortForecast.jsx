@@ -13,6 +13,7 @@ export const ShortForecast = ({ searchValue }) => {
   const [btnSeeMoreOpen, setBtnSeeMoreOpen] = useState(false);
   const [selectedWeather, setSelectedWeather] = useState(null);
   const [device, setDevice] = useState("desktop");
+  const [openWeekly, setOpenWeekly] = useState(false);
 
   const normalizeWeather = (item) => {
     return {
@@ -47,9 +48,9 @@ export const ShortForecast = ({ searchValue }) => {
     };
     fetchData();
 
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth < 768) {
       setDevice("mobile");
-    } else if (window.innerWidth <= 1024) {
+    } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
       setDevice("tablet");
     } else {
       setDevice("desktop");
@@ -95,7 +96,13 @@ export const ShortForecast = ({ searchValue }) => {
               <button className="shortForecast-btn-hourly">
                 Hourly forecast
               </button>
-              <button className="shortForecast-btn-weekly">
+              <button
+                className="shortForecast-btn-weekly"
+                onClick={() => {
+                  setSelectedWeather(normalizeWeather(item));
+                  setOpenWeekly((prev) => !prev);
+                }}
+              >
                 Weekly forecast
               </button>
             </div>
@@ -133,7 +140,8 @@ export const ShortForecast = ({ searchValue }) => {
                 className="shortForecast-btn-seeMore"
                 onClick={() => {
                   setSelectedWeather(normalizeWeather(item));
-                  setBtnSeeMoreOpen(true);
+                  setBtnSeeMoreOpen((prev) => !prev);
+                  setOpenWeekly((prev) => !prev);
                 }}
               >
                 See more
@@ -152,7 +160,7 @@ export const ShortForecast = ({ searchValue }) => {
       {/* {btnSeeMoreOpen && (
         <HourlyForecast selectedWeatherData={selectedWeather} />
       )} */}
-      {btnSeeMoreOpen && <WeeklyForecast selectedWeather={selectedWeather} />}
+      {openWeekly && <WeeklyForecast selectedWeather={selectedWeather} />}
     </>
   );
 };

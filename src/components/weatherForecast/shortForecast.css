@@ -131,19 +131,27 @@ height: 25px;
         height: 25px;
 }
 
+/* ////////////////// tablet ////////////////// */
+
+@media screen and (max-width: 768px) {
+    .shortForecast {
+        display: flex;
+           gap: 40px;
+    }
+}
+
 
 /* ////////////////// mobile ////////////////// */
 
 @media screen and (max-width: 480px) {
     .shortForecast {
-display: block;
-padding: 0;
 padding: 30px 0 30px 0;
+
     
         }
     
         .shortForecast-card {
-
+              
     
         }
     

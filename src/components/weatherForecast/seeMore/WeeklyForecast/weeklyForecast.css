@@ -1,7 +1,7 @@
 .weeklyForecast{
   background-color: rgba(232, 232, 232, 1);
   border-radius: 20px;
-  margin-top: 120px;
+  margin-top: 40px;
 }
 
 .weeklyForecast-container{
@@ -68,7 +68,7 @@ width: 45px;
 
 @media screen and (max-width: 768px) {
     .weeklyForecast {
-
+          margin-bottom: 30px;
         }
     
         .weeklyForecast-container {
@@ -112,4 +112,62 @@ width: 35px;
 
 }
 
+
+/* ////////////////// mobile ////////////////// */
+
+@media screen and (max-width: 480px) {
+
+    .weeklyForecast {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .weeklyForecast-container {
+        padding: 10px 25px 10px 25px;
+    }
+                .weeklyForecast-title-desktop {
+                    display: none;
+                }
+        
+                .weeklyForecast-title-tablet {
+                   font-size: 10px;
+                   margin-top: 10px;
+                }
+        
+                .weeklyForecast-list {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                }
+        
+                .weeklyForecast-card {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    width: 100px;
+                    height: 140px;
+                }
+        
+                .weeklyForecast-date {
+                    font-size: 10px;
+                }
+        
+                .weeklyForecast-box-middleOfCard {
+                    display: flex;
+                    flex-direction: column;
+                }
+        
+                .weeklyForecast-icon {
+                width: 50px;
+                }
+        
+                .weeklyForecast-temp {
+                    font-size: 10px;
+                }
+        
+                .weeklyForecast-weather-description {
+                    font-size: 10px;
+                }
+}
 

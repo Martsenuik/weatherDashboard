@@ -13,7 +13,11 @@ export const WeeklyForecast = ({ selectedWeather }) => {
 
         if (!data?.list) return;
 
-        setWeeklyForecast(data.list.slice(0, 8));
+        const dailyForecast = data.list.filter((item) =>
+          item.dt_txt.includes("12:00:00"),
+        );
+
+        setWeeklyForecast(dailyForecast.slice(0, 8));
       });
   }, [selectedWeather]);
 
