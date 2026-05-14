@@ -8,7 +8,7 @@ export const WeatherDetails = ({ weatherData }) => {
     <section className="weatherDetails">
       <ul className="weatherDetails-list">
         {data.map((item, index) => {
-          if (item.minTemp || item.maxTemp) {
+          if (item.maxTemp || item.minTemp) {
             return (
               <li className="weatherDetails-item" key={index}>
                 <p className="weatherDetails-type-text">{item.minTemp}</p>

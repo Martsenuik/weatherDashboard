@@ -5,7 +5,7 @@ import heart from "../../images/svg/heart.svg";
 import SvgDelete from "../../images/svg/SvgDelete.svg";
 import { cityCordinates } from "./cityCordinates";
 import { WeatherDetails } from "./seeMore/WeatherDetails/WeatherDetails";
-import { HourlyForecast } from "./seeMore/HourlyForecast/HourlyForecast";
+import { ChartForecast } from "./seeMore/ChartForecast/ChartForecast";
 import { WeeklyForecast } from "./seeMore/WeeklyForecast/WeeklyForecast";
 
 export const ShortForecast = ({ searchValue }) => {
@@ -14,6 +14,7 @@ export const ShortForecast = ({ searchValue }) => {
   const [selectedWeather, setSelectedWeather] = useState(null);
   const [device, setDevice] = useState("desktop");
   const [openWeekly, setOpenWeekly] = useState(false);
+  const [openChart, setOpenChart] = useState(false);
 
   const normalizeWeather = (item) => {
     return {
@@ -93,8 +94,14 @@ export const ShortForecast = ({ searchValue }) => {
             </p>
 
             <div className="shortForecast-box-btn">
-              <button className="shortForecast-btn-hourly">
-                Hourly forecast
+              <button
+                className="shortForecast-btn-hourly"
+                onClick={() => {
+                  setSelectedWeather(normalizeWeather(item));
+                  setOpenChart((prev) => !prev);
+                }}
+              >
+                Forecast on chart
               </button>
               <button
                 className="shortForecast-btn-weekly"
@@ -157,10 +164,9 @@ export const ShortForecast = ({ searchValue }) => {
         ))}
       </section>
       {btnSeeMoreOpen && <WeatherDetails weatherData={selectedWeather} />}
-      {/* {btnSeeMoreOpen && (
-        <HourlyForecast selectedWeatherData={selectedWeather} />
-      )} */}
+      {btnSeeMoreOpen && <ChartForecast selectedWeather={selectedWeather} />}
       {openWeekly && <WeeklyForecast selectedWeather={selectedWeather} />}
+      {openChart && <ChartForecast selectedWeather={selectedWeather} />}
     </>
   );
 };

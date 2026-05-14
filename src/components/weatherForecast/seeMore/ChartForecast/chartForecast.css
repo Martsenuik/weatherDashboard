@@ -1,0 +1,45 @@
+.chartForecast{
+  height: 670px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(232, 232, 232, 1);
+  border-radius: 20px;
+}
+
+.chartForecast-box{
+
+}
+
+.chart{
+    width: 1100px !important;
+    height: 560px !important;
+}
+
+/* ////////////////// tablet ////////////////// */
+
+@media screen and (max-width: 768px) {
+    .chartForecast {
+            height: 370px;
+        }
+    .chart {
+            width: 604px !important;
+            height: 320px !important;
+        }
+}
+
+/* ////////////////// mobile ////////////////// */
+
+@media screen and (max-width: 480px) {
+
+    .chartForecast {
+            height: 130px;
+            margin-bottom: 30px;
+        }
+    
+        .chart {
+            width: 183px !important;
+            height: auto !important;
+        }
+}
+
+
