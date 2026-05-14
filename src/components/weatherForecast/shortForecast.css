@@ -1,8 +1,8 @@
 .shortForecast{
     display: flex;
-            justify-content: space-between;
-        padding: 40px;
-        
+            justify-content: space-evenly;
+        gap: 20px;
+        margin: 0;
 }
 
 .shortForecast-card{
@@ -136,7 +136,9 @@ height: 25px;
 @media screen and (max-width: 768px) {
     .shortForecast {
         display: flex;
-           gap: 40px;
+                justify-content: center;
+           /* gap: 40px; */
+           margin-bottom: 30px;
     }
 }
 

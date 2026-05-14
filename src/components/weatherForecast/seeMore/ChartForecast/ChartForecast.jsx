@@ -85,6 +85,7 @@ export const ChartForecast = ({ selectedWeather }) => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: true,

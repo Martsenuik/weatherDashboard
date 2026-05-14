@@ -5,7 +5,7 @@
             justify-content: flex-start;
             gap: 140px;
             padding: 50px;
-            padding: 0 130px;
+
             height: 139px;
             margin: 0;
 }
@@ -45,7 +45,9 @@
 
 @media screen and (max-width: 768px) {
     .footer {
-            
+        display: flex;
+    justify-content: space-evenly;
+    gap: 0;
         }
     
         .footer-logo {
