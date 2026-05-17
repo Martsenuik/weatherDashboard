@@ -118,7 +118,7 @@ width: 35px;
 @media screen and (max-width: 480px) {
 
     .weeklyForecast {
-        margin: 0 50px 30px 50px;
+        margin: 30px 50px 30px 50px;
     }
 
     .weeklyForecast-container {

@@ -3,6 +3,7 @@
             justify-content: space-evenly;
         gap: 20px;
         margin: 0;
+        padding-top: 30px;
 }
 
 .shortForecast-card{
